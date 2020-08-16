@@ -1,0 +1,27 @@
+{
+    "name": "node_shop_server",
+    "description": "flutter 女装商城",
+    "authors": "qinwendong",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "request": "^2.85.0"
+    },
+    "main": "pathToMain",
+    "scripts": {
+        "start": "node app.js",
+        "test": "mocha -r intell-espower-loader -t 20000 test",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "prettier --writer",
+            "git add"
+        ]
+    },
+    "keywords": [
+        "node",
+        "shop"
+    ]
+}
