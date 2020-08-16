@@ -1,9 +1,13 @@
-const router = require("express");
+
+const express = require("express");
+const router = express();
 const config = require("./config");
+
 const base_url = "http://" + config.IP + ":" + config.PORT + "/images/";
 const category_url = "http://" + config.IP + ":" + config.PORT + "/images/category";
 
-router.get("/", (req, res) => {
+//router.get("/", (req, res) => {//前端测试
+router.post("/", (req, res) => {
     var data = {
         "code": 0,
         "message": "success",
@@ -12,19 +16,19 @@ router.get("/", (req, res) => {
             "slides": [
                 {
                     "image": base_url + "banner/1.jpg",
-                    "goodsId": "001"
+                    "goodsId": "001",
                 },
                 {
                     "image": base_url + "banner/2.jpg",
-                    "goodsId": "002"
+                    "goodsId": "002",
                 },
                 {
                     "image": base_url + "banner/3.jpg",
-                    "goodsId": "003"
+                    "goodsId": "003",
                 },
                 {
                     "image": base_url + "banner/4.jpg",
-                    "goodsId": "004"
+                    "goodsId": "004",
                 },
             ],
             //
@@ -113,7 +117,7 @@ router.get("/", (req, res) => {
                 "goodsId": "005"
             },],
 
-            //
+            
             "category": [
                 {
                     "firstCategoryId": "1",
