@@ -4,7 +4,7 @@ const router = express();
 const config = require("./config");
 
 const base_url = "http://" + config.IP + ":" + config.PORT + "/images/";
-const category_url = "http://" + config.IP + ":" + config.PORT + "/images/category";
+const category_url = "http://" + config.IP + ":" + config.PORT + "/images/category/";
 
 //router.get("/", (req, res) => {//前端测试
 router.post("/", (req, res) => {
